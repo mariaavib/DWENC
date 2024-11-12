@@ -1,0 +1,33 @@
+<!--Realizar un programa que permita cargar dos listas de 3 valores cada una.
+Informar con un mensaje cual de las dos listas tiene un valor acumulado mayor
+(mensajes 'Lista 1 mayor', 'Lista 2 mayor', 'Listas iguales')
+Tener en cuenta que puede haber dos o más estructuras repetitivas en un
+algoritmo.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <script>
+        lista1 = [5,2,7];
+        lista2 = [4,3,9];
+        let s1=0,s2=0;
+        
+        for(let i=0;i<3;i++){
+            s1=s1+lista1[i];
+            s2=s2+lista2[i];
+        }
+        if(s1>s2)
+            console.log("Lista 1 es mayor");
+        else{
+            if(s2>s1){
+                console.log("Lista 2 es mayor");
+            }else{
+                console.log("Son iguales");
+            }
+        }
+    </script>
+</body>
+</html>

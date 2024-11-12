@@ -1,0 +1,80 @@
+<!-- Se cuenta con la siguiente información:
+Las edades de 5 estudiantes del turno mañana.
+Las edades de 6 estudiantes del turno tarde.
+Las edades de 11 estudiantes del turno noche.
+Las edades de cada estudiante deben ingresarse por teclado.
+a) Obtener el promedio de las edades de cada turno (tres promedios).
+b) Imprimir dichos promedios (promedio de cada turno).
+c) Mostrar por pantalla un mensaje que indique cual de los tres turnos
+tiene un promedio de edades mayor. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 12</title>
+</head>
+<body>
+    <script>
+        let mañana = [];
+        let tarde = [];
+        let noche = [];
+
+        for(let i=0;i<5;i++){
+            mañana[i]=parseInt(prompt("Edad turno mañana: "));
+        }
+        
+        for(let i=0;i<6;i++){
+            tarde[i]=parseInt(prompt("Edad turno tarde: "));
+        }
+
+        for(let i=0;i<11;i++){
+            noche[i]=parseInt(prompt("Edad turno noche: "));
+        }
+
+        let mm=0,sm=0;
+        for(let i=0;i<5;i++){
+            sm=sm+mañana[i];
+            mm=sm/5;
+        }
+        console.log(mañana);
+        console.log("Media de edad turno de mañana: ",mm);
+
+        let mt=0,st=0;
+        for(let i=0;i<6;i++){
+            st=st+tarde[i];
+            mt=st/5;
+        }
+        console.log(tarde);
+        console.log("Media de edad turno de tarde: ",mt);
+
+        let mn=0,sn=0;
+        for(let i=0;i<6;i++){
+            sn=sn+noche[i];
+            mn=sn/5;
+        }
+        console.log(noche);
+        console.log("Media de edad turno de noche: ",mn);
+
+        let aux=mm;
+        if(aux<mt){
+            aux=mt;
+        }
+        if(aux<mn){
+            aux=mn;
+        }
+
+        switch(aux){
+            case mm:
+                console.log("La media mayor es la del turno de mañana");
+                break;
+            case mt:
+                console.log("La media mayor es la del turno de tarde");
+                break;
+            case mn:
+                console.log("La media mayor es la del turno de noche");
+                break;
+        }
+    </script>
+
+</body>
+</html>
