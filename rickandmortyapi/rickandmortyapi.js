@@ -14,6 +14,7 @@ function visualizar(){
         console.log(error);
     })
 }
+
 function mostrarPersonajes(data){
     const contenedor = document.getElementById("contenedor");
     for (let i = 0; i < data.results.length; i++) {
