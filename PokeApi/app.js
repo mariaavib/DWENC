@@ -11,6 +11,12 @@ async function informacion(){
     //console.log(pok);
 
     const informacion = document.getElementById("pokemon-data");
+    const id = document.createElement("p");
+    id.innerText= "ID: "+pok.id;
+    informacion.appendChild(id);
+
+
+
     for(let i=0;i<pok.sprites;i++){
         const pokemon = pok.sprites[i];
         const img = document.createElement("img");
