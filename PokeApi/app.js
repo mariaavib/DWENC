@@ -63,6 +63,7 @@ function buscarPokemonV2(){
  */
 
 function buscarPokemonJQueryAJAX(){
+    let pokemonBusc = document.getElementById('pokemon-input').value;
     $.ajax({
         type: "GET",
         url:  `https://pokeapi.co/api/v2/pokemon/${pokemonBusc}`,
@@ -87,16 +88,19 @@ function buscarPokemonJQueryAJAX(){
 /**
  * Haciendo uso de JQuery, descomentar para usar la función buscarPokemonJQueryAJAX
 */
-
+/*
 $(document).ready(function(){
     $('#search-btn').on('click', buscarPokemonJQueryAJAX);
 }); 
-
+*/
 /**
  * Ejercicio 4: 
  */
 
 function agregar(){
+    let pokemonBusc = document.getElementById('pokemon-input').value;
+    let capturados = [];
+
     $.ajax({
         type: "GET",
         url:  `https://pokeapi.co/api/v2/pokemon/${pokemonBusc}`,
@@ -112,11 +116,16 @@ function agregar(){
             img.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`);
             informacion.appendChild(img);
             const boton = $("<button>").text("Agregar");
+
         },
         error: function() {
             alert("No exixte el pokémon");
         }
     })
 }
+
+$(document).ready(function(){
+    $('#search-btn').on('click', agregar);
+}); 
 
 
