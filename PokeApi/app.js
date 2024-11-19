@@ -105,18 +105,19 @@ function agregar(){
         type: "GET",
         url:  `https://pokeapi.co/api/v2/pokemon/${pokemonBusc}`,
         success: function(pokemon){
-            const informacion = document.getElementById("pokemon-data");
+            const informacion = $("#pokemon-data");
             const id = document.createElement("p");
             const nombre = document.createElement("p");
             id.innerText= "ID: "+pokemon.id;
-            informacion.appendChild(id);
+            informacion.append(id);
             nombre.innerText = "Nombre: "+pokemon.name;
-            informacion.appendChild(nombre);
+            informacion.append(nombre);
             const img = document.createElement("img");
             img.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`);
-            informacion.appendChild(img);
-            const boton = $("<button>").text("Agregar");
-
+            informacion.append(img);
+            const boton = $('<button>').text("Agregar");
+            boton.attr("id", "agregar");
+            informacion.append(boton);
         },
         error: function() {
             alert("No exixte el pokémon");
