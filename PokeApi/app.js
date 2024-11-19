@@ -92,3 +92,31 @@ $(document).ready(function(){
     $('#search-btn').on('click', buscarPokemonJQueryAJAX);
 }); 
 
+/**
+ * Ejercicio 4: 
+ */
+
+function agregar(){
+    $.ajax({
+        type: "GET",
+        url:  `https://pokeapi.co/api/v2/pokemon/${pokemonBusc}`,
+        success: function(pokemon){
+            const informacion = document.getElementById("pokemon-data");
+            const id = document.createElement("p");
+            const nombre = document.createElement("p");
+            id.innerText= "ID: "+pokemon.id;
+            informacion.appendChild(id);
+            nombre.innerText = "Nombre: "+pokemon.name;
+            informacion.appendChild(nombre);
+            const img = document.createElement("img");
+            img.src = (`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`);
+            informacion.appendChild(img);
+            const boton = $("<button>").text("Agregar");
+        },
+        error: function() {
+            alert("No exixte el pokémon");
+        }
+    })
+}
+
+
