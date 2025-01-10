@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Edad</title>
+</head>
+<body>
+    <script>
+        //Crea un programa que pida al usuario su año de nacimiento y calcule su edad actual.
+
+        let a = prompt("Introduce tu año de nacimiento: ");
+        a = parseInt(a);
+
+        let fecha = new Date();
+
+        console.log(fecha.getFullYear() - a);
+    </script>
+</body>
+</html>
