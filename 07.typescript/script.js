@@ -2,6 +2,7 @@ var interMiami = 11;
 var fcDallas = 11;
 var celia = 1;
 var juegaCelia = true;
+var palabras = "Me emocioné al ver a Celia";
 function jugar(equipo1, equipo2, juegaCelia) {
     var motivo = '';
     if (juegaCelia) {
