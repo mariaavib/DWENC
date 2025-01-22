@@ -3,6 +3,7 @@ let fcDallas: number = 11
 let celia: number = 1
 let juegaCelia: boolean = true
 
+
 let palabras: string = "Me emocioné al ver a Celia"
 
 function jugar(equipo1: number, equipo2: number, juegaCelia: boolean): void{
