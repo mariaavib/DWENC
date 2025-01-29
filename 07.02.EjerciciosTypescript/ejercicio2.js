@@ -75,6 +75,30 @@ console.log("El area del triangulo es ".concat(triangulo.calcularArea()));
 var rectangulo2 = new Rectangulo(2, 5);
 console.log("El area del rectangulo es ".concat(rectangulo2.calcularArea()));
 /**Ejercicio 4 */
+console.log("Ejercicio 4");
 function getVillano(nombre, edad, arma) {
     if (arma === void 0) { arma = 'Pistola'; }
+    var mensaje;
+    if (edad != undefined) {
+        mensaje = "".concat(nombre, " tiene una edad de: ").concat(edad, " y arma ").concat(arma);
+    }
+    else {
+        mensaje = "".concat(nombre, " tiene una ").concat(edad);
+    }
+    console.log(mensaje);
 }
+getVillano('maria', 20);
+/**Ejercicio 5 */
+console.log("Ejercicio 5");
+var obtenerDoble = function (a, b) { return (a + b) * 2; };
+var obtenerTriple = function (a, b, c) { return (a + b + c) * 3; };
+console.log(obtenerDoble(1, 2));
+console.log(obtenerTriple(1, 2, 4));
+/**Ejercicio 6 */
+console.log("Ejercicio 6");
+var camaleon = {
+    tipo: "Reptil",
+    peculariedad: "camuflarse"
+};
+console.log(camaleon.tipo);
+console.log(camaleon.peculariedad);
