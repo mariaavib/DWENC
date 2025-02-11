@@ -8,7 +8,8 @@ body {
 
 form {
     background: #fff;
-    padding: 40px;
+    width: 30%;
+    padding: 10px;
     border-radius: 10px;
     border: 2px solid;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -31,18 +32,15 @@ input[type="submit"] {
     transition: background 0.3s;
 }
 
-input[type="number"] {
-    width: 98%;
-    display: block;
-    margin: 0 auto;
-}
-
 input[type="text"]{
     margin-top: 10px;
+    width: 90%;
+
 }
 
 label{
     font-weight: bold;
+    font-size: 14px;
 }
 
 #añadir {
